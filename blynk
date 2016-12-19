@@ -1,0 +1,5 @@
+#add blynk to core rpi
+
+node /usr/bin/blynk.js token_goes_here
+
+put above line in /etc/rc.local
