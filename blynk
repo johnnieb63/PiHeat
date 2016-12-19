@@ -3,3 +3,6 @@
 node /usr/bin/blynk.js token_goes_here
 
 put above line in /etc/rc.local
+
+
+http://docs.blynk.cc/#hardware-set-ups-raspberry-pi
