@@ -1,3 +1,4 @@
+# use sudo crontab -e to run this programme every minute
 # Add this file to the top level of your Sender Pi
 # Distributed with a free-will license.
 # Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
