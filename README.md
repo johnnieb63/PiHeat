@@ -1,7 +1,7 @@
 # PiHeat
 Slave Pi and Controller Pi (S-Pi & C-Pi)
 
-1. Install Flask on C-Pi
+1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
 
 Description: S-Pi sends stuff to Flask server running on C-Pi this is done using webrelay.py. webrelay.py is run once a minute using cron.
 
