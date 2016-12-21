@@ -27,6 +27,7 @@ GPIO.setup(16, GPIO.IN) #medium ECO_MODE
 GPIO.setup(20, GPIO.IN) #high BLAST HEAT
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 FOR I2C DISPLAY
 
 i2cdetect -y 1
@@ -46,6 +47,7 @@ should have these entries:
   666 ?        Sl     0:00 node /usr/bin/blynk.js dfafasdfdfsavsvddfsfqWR3987797
   
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
   Breathe LED on S-Pi
   install WiringPi-Python
   auto start breathe.py using rc.local
