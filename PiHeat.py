@@ -164,6 +164,7 @@ while True:
         mylcd.lcd_display_string("HEATING IS OFF", 1)
         mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
         time.sleep(10)
+        mylcd.lcd_clear()
         mylcd.lcd_display_string("Dad smiles...", 1)
         mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
         time.sleep(3)
