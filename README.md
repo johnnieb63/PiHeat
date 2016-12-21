@@ -25,3 +25,10 @@ GPIO.setup(12, GPIO.IN) #low heat condition HEATING IS OFF DUE TO THERMOSTAT
 GPIO.setup(16, GPIO.IN) #medium ECO_MODE
 
 GPIO.setup(20, GPIO.IN) #high BLAST HEAT
+
+
+FOR I2C DISPLAY
+
+i2cdetect -y 1
+
+note address and change bus to 1, line 19 of i2c driver program
