@@ -4,6 +4,11 @@
 import RPi.GPIO as GPIO
 import I2C_LCD_driver
 
+# import date and time modules
+import datetime
+import time
+from datetime import date
+
 # set up GPIO pins as outputs
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn off heating
@@ -13,12 +18,7 @@ GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn on heating
 GPIO.setup(12, GPIO.IN) #low heat condition HEATING IS OFF DUE TO THERMOSTAT
 GPIO.setup(16, GPIO.IN) #medium ECO_MODE
 GPIO.setup(20, GPIO.IN) #high BLAST HEAT
-
-# import date and time modules
-import datetime
-import time
-from datetime import date
-
+# set heating relay and indicator light off
 GPIO.output(24, False)
 GPIO.output(27, False)
 
