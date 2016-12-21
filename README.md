@@ -32,3 +32,15 @@ FOR I2C DISPLAY
 i2cdetect -y 1
 
 note address and change bus to 1, line 19 of i2c driver program
+
+Start S-Pi before C-Pi
+
+SSH to C-Pi
+
+$ ps ax 
+
+should have these entries:
+
+  664 ?        S      0:00 sudo python /home/pi/PiHeat.py
+  665 ?        S      0:00 sudo python /home/pi/todo-api/webrelay.py
+  666 ?        Sl     0:00 node /usr/bin/blynk.js dfafasdfdfsavsvddfsfqWR3987797
