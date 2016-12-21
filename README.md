@@ -55,3 +55,9 @@ should have these entries:
   install WiringPi-Python
   
   auto start breathe.py using rc.local
+  
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  test that temperatures are being sent: curl -i http://localhost:80/WebRelay/api/relays
+  
+  set a state: curl -i -H "Content-Type: application/json" -X PUT -d '{"state":"off"}' http://localhost:80/WebRelay/api/relays/1
