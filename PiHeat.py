@@ -158,6 +158,7 @@ while True:
                    mylcd.lcd_display_string("HEAT VIA  MOBILE", 1)
                    mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString), 2)
                    time.sleep(2)
+                   mylcd.lcd_clear()
 
         GPIO.output(24, False)
         GPIO.output(27, False)
