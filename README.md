@@ -1,9 +1,9 @@
 # PiHeat
-This project uses 2 x Pi: Slave Pi and Controller Pi (S-Pi & C-Pi)
+Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 1. Install Flask on C-Pi
 
-Description: S-Pi sends room temp states to Flask server running on C-Pi this is done using webrelay.py. Nasty hack alert! webrelay.py is run once a minute using cron.
+Description: S-Pi sends stuff to Flask server running on C-Pi this is done using webrelay.py. webrelay.py is run once a minute using cron.
 
 
 
