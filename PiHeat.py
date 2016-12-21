@@ -155,8 +155,8 @@ while True:
         while (GPIO.input(17) == 1):
                    GPIO.output(24, True)
                    GPIO.output(27, True)
-                   mylcd.lcd_display_string("HEAT VIA  MOBILE", 1)
-                   mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString), 2)
+                   mylcd.lcd_display_string("HEAT VIA MOBILE", 1)
+                   mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
                    time.sleep(2)
                    mylcd.lcd_clear()
 
