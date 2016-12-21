@@ -1,4 +1,4 @@
-#add blynk to core rpi
+#add blynk to C-PI
 
 node /usr/bin/blynk.js token_goes_here
 
