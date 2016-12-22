@@ -3,10 +3,11 @@ Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
 
-Description: S-Pi sends stuff to Flask server running on C-Pi this is done using webrelay.py. webrelay.py is run once a minute using cron.
+Description: S-Pi sends stuff to Flask server running on C-Pi this is done using temp2.py.
 
+S-Pi runs: breathe.py and temp2.py. Cron runs temp2.py every minute to send state values via JSON to C-Pi
 
-
+C-Pi runs: I2C_LCD_driver.py, PiHeat.py, blynk (at start using rc.local), todo-api/relaydefinitions.py, todo-api/webrelay.py (flask server)
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -52,9 +53,12 @@ should have these entries:
   
   Breathe LED on S-Pi
   
-  install WiringPi-Python
+  install WiringPi-Python: https://github.com/WiringPi/WiringPi-Python :: follow instructions for manual build
   
   auto start breathe.py using rc.local
+  
+  useful article: http://raspi.tv/2013/how-to-use-wiringpi2-for-python-on-the-raspberry-pi-in-raspbian
+  
   
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
