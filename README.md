@@ -13,7 +13,9 @@ Start S-Pi before C-Pi
 
 SSH to C-Pi
 
-$ ps ax 
+```
+ps ax
+```
 
 should have these entries:
 
