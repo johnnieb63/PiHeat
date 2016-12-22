@@ -67,3 +67,23 @@ note address and change bus to 1, line 19 of i2c driver program
   test that temperatures are being sent: curl -i http://localhost:80/WebRelay/api/relays
   
   set a state: curl -i -H "Content-Type: application/json" -X PUT -d '{"state":"off"}' http://localhost:80/WebRelay/api/relays/1
+  
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+  C-Pi needs a static IP
+  
+  sudo nano /etc/dhcpcd.conf
+  
+  add this to the bottom of that file and reboot. ifconfig to check
+  
+  ==================================dhcpcd.conf==================================
+  
+  interface wlan0
+  
+  static ip_address=192.168.0.200/24
+  
+  static routers=192.168.0.1
+  
+  static domain_name_servers=192.168.0.1
+  
+  ==================================dhcpcd.conf==================================
