@@ -87,3 +87,16 @@ note address and change bus to 1, line 19 of i2c driver program
   static domain_name_servers=192.168.0.1
   
   ==================================dhcpcd.conf==================================
+  
+  Install Blynk
+  
+  ```
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install build-essential
+sudo npm install -g npm
+sudo npm install -g onoff
+sudo npm install -g blynk-library
+```
+
+Put  node full_path_to_your_script.js <Auth Token> into /etc/rc.local
+
