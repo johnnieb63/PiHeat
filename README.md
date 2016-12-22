@@ -102,3 +102,9 @@ sudo npm install -g blynk-library
 
 Put  node full_path_to_your_script.js <Auth Token> into /etc/rc.local
 
+
+
+NOTE: 
+
+sudo chmod +x temp2.py and other programs that are being autorun
+
