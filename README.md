@@ -3,7 +3,7 @@ Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
 
-Description: S-Pi sends stuff to Flask server running on C-Pi this is done using temp2.py.
+Description: S-Pi sends stuff to Flask server running on C-Pi by means of temp2.py.
 
 S-Pi runs: breathe.py and temp2.py. Cron runs temp2.py every minute to send state values via JSON to C-Pi
 
