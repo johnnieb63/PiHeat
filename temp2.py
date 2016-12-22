@@ -64,37 +64,41 @@ import requests
         print "Temperature in Celsius  : %.2f C" %cTemp
         #print "Temperature in Fahrenheit  : %.2f F" %fTemp
 
-        if cTemp > 23:
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "on"})
-                headers = {'Content-type': 'application/json'}
+        if cTemp > 19:
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "on"})
+        headers = {'Content-type': 'application/json'}
+                #GPIO.output(7, True)
+                #time.sleep(5)
+                #GPIO.output(7, False)
                 #print(r.status_code)
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "off"})
-                headers = {'Content-type': 'application/json'}
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "off"})
+        headers = {'Content-type': 'application/json'}
                 #print(r.status_code)
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "off"})
-                headers = {'Content-type': 'application/json'}
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "off"})
+        headers = {'Content-type': 'application/json'}
                 #print(r.status_code)
-        if ((cTemp >= 21) and (cTemp <= 23)):
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "on"})
-                headers = {'Content-type': 'application/json'}
+if ((cTemp >= 16.8) and (cTemp <= 19)):
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "on"})
+        headers = {'Content-type': 'application/json'}
+                #GPIO.output(8, True)
+                #time.sleep(5)
+                #GPIO.output(8, False)                
                 #print(r.status_code)
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "off"})
-                headers = {'Content-type': 'application/json'}
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "off"})
+        headers = {'Content-type': 'application/json'}
                 #print(r.status_code)
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "off"})
-                headers = {'Content-type': 'application/json'}
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "off"})
+        headers = {'Content-type': 'application/json'}
                 #print(r.status_code)
-        if cTemp < 21:
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "on"})
-                headers = {'Content-type': 'application/json'}
+if cTemp < 16.8:
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "on"})
+        headers = {'Content-type': 'application/json'}
+                #GPIO.output(25, True)
+                #time.sleep(5)
+                #GPIO.output(25, False)                
                 #print(r.status_code)
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "off"})
-                headers = {'Content-type': 'application/json'}
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "off"})
+        headers = {'Content-type': 'application/json'}
                 #print(r.status_code)
-                r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "off"})
-                headers = {'Content-type': 'application/json'}
-       
-        if (r.status_code==200):
-                print "sent ok"
-        time.sleep(9)
-
+        r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "off"})
+        headers = {'Content-type': 'application/json'}
