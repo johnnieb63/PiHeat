@@ -9,9 +9,23 @@ S-Pi runs: breathe.py and temp2.py. Cron runs temp2.py every minute to send stat
 
 C-Pi runs: I2C_LCD_driver.py, PiHeat.py, blynk (at start using rc.local), todo-api/relaydefinitions.py, todo-api/webrelay.py (flask server)
 
+Start S-Pi before C-Pi
+
+SSH to C-Pi
+
+$ ps ax 
+
+should have these entries:
+
+  664 ?        S      0:00 sudo python /home/pi/PiHeat.py
+  
+  665 ?        S      0:00 sudo python /home/pi/todo-api/webrelay.py
+  
+  666 ?        Sl     0:00 node /usr/bin/blynk.js dfafasdfdfsavsvddfsfqWR3987797
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Use of GPIO Pins:
+For C-Pi use these GPIO Pins:
 
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn off heating
 
@@ -35,21 +49,7 @@ i2cdetect -y 1
 
 note address and change bus to 1, line 19 of i2c driver program
 
-Start S-Pi before C-Pi
-
-SSH to C-Pi
-
-$ ps ax 
-
-should have these entries:
-
-  664 ?        S      0:00 sudo python /home/pi/PiHeat.py
-  
-  665 ?        S      0:00 sudo python /home/pi/todo-api/webrelay.py
-  
-  666 ?        Sl     0:00 node /usr/bin/blynk.js dfafasdfdfsavsvddfsfqWR3987797
-  
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   Breathe LED on S-Pi
   
