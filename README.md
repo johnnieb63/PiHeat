@@ -53,6 +53,8 @@ note address and change bus to 1, line 19 of i2c driver program
   
   Breathe LED on S-Pi
   
+  Code for breathe.py came from: https://lifebydesignuk.wordpress.com/2013/02/20/how-to-breathing-led-in-python-for-raspberrypi/
+  
   install WiringPi-Python: https://github.com/WiringPi/WiringPi-Python :: follow instructions for manual build
   
   auto start breathe.py using rc.local
