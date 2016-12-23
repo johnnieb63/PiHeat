@@ -108,3 +108,13 @@ NOTE:
 
 sudo chmod +x temp2.py and other programs that are being autorun
 
+S-Pi crontab -e: 
+
+*/1 * * * * sudo python /home/pi/temp2.py
+
+0 */4 * * * sudo reboot
+
+C-Pi crontab -e:
+
+0 */6 * * * sudo reboot
+
