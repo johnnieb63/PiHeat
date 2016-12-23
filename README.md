@@ -117,5 +117,3 @@ S-Pi crontab -e:
 C-Pi crontab -e:
 
 0 */6 * * * sudo reboot
-
-@reboot hciconfig hci0 down #turn-off bluetooth
