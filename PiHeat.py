@@ -186,7 +186,7 @@ while True:
           mylcd.lcd_display_string((OnTime2PM[currDay].strftime(dateString2)), 1)
           mylcd.lcd_display_string("next on time (5)", 2)
         if (datetime.datetime.now().strftime(dateString) > OffTime2PM[currDay].strftime(dateString) and datetime.datetime.now().strftime(dateString) < OnTime3PM[currDay].strftime(dateString)):
-          mylcd.lcd_display_string((OnTime2PM[currDay].strftime(dateString2)), 1)
+          mylcd.lcd_display_string((OnTime3PM[currDay].strftime(dateString2)), 1)
           mylcd.lcd_display_string("next on time (6)", 2)
         if (datetime.datetime.now().strftime(dateString) > OffTime3PM[currDay].strftime(dateString)):
           mylcd.lcd_display_string((OnTimeAM[tomDay].strftime(dateString2)), 1)
