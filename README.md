@@ -122,7 +122,7 @@ sudo npm install -g blynk-library
 
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-  #Installing s-Pi
+Installing s-Pi
   
   MPL3115A2 notes
 
@@ -167,6 +167,9 @@ sudo i2cdetect -y 1
 ```
 ```
 sudo apt-get install python-smbus 
+```
+```
+sudo pip install ubidots
 ```
 
 
