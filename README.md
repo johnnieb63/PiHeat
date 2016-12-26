@@ -117,3 +117,31 @@ S-Pi crontab -e:
 C-Pi crontab -e:
 
 0 */6 * * * sudo reboot
+
+
+s-Pi installing MPL3115A2 notes
+
+INSTALLING I2C FOR PI
+
+Getting started you'll have to install the I2C packages for Raspberry Pi, and enable them.
+From a Raspberry Pi terminal use the following commands:
+sudo apt-get install python-smbus
+sudo apt-get install i2c-tools
+
+Enable the modules by adding them to /etc/modules
+sudo nano /etc/modules
+and add the following two lines:
+i2c-bcm2708
+i2c-dev
+
+Remove the modules from the blacklist by commenting them out "add # to the front"
+sudo nano /etc/modprobe.d/raspi-blacklist.conf
+Make sure the spi and i2c lines are commented out: 
+#blacklist spi-bcm2708
+#blacklist i2c-bcm2708
+
+Lastly, the MPL3115A2 requires a proper repeated start command in it's I2C communication. Raspberry Pi doesn't do this out of the box, but there is a kernel module that can be enabled to make it perform repeated start correctly. Run the following commands to enable repeated start on the Pi:
+sudo su -
+echo -n 1 > /sys/module/i2c_bcm2708/parameters/combined
+exit
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
