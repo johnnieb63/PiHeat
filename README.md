@@ -145,7 +145,9 @@ Make sure the spi and i2c lines are commented out:
   "#blacklist i2c-bcm2708"
 
 Lastly, the MPL3115A2 requires a proper repeated start command in it's I2C communication. Raspberry Pi doesn't do this out of the box, but there is a kernel module that can be enabled to make it perform repeated start correctly. Run the following commands to enable repeated start on the Pi:
+'''
 sudo su -
 echo -n 1 > /sys/module/i2c_bcm2708/parameters/combined
 exit
+'''
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
