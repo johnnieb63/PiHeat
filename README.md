@@ -94,7 +94,7 @@ note address and change bus to 1, line 19 of i2c driver program
   
   Install Blynk
   
-  ```
+```
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install build-essential
 sudo npm install -g npm
@@ -145,9 +145,12 @@ sudo npm install -g blynk-library
     "#blacklist i2c-bcm2708"
 
   Lastly, the MPL3115A2 requires a proper repeated start command in it's I2C communication. Raspberry Pi doesn't do this out of the box, but there is a kernel module that can be enabled to make it perform repeated start correctly. Run the following commands to enable repeated start on the Pi:
-'''
+
+```
 sudo su -
 echo -n 1 > /sys/module/i2c_bcm2708/parameters/combined
 exit
-'''
+```
+
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
