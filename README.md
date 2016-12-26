@@ -122,7 +122,9 @@ sudo npm install -g blynk-library
 
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-  s-Pi installing MPL3115A2 notes
+  #Installing s-Pi
+  
+  MPL3115A2 notes
 
   INSTALLING I2C FOR PI
 
@@ -152,9 +154,6 @@ echo -n 1 > /sys/module/i2c_bcm2708/parameters/combined
 exit
 ```
 
-
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
   install pip and smbus
 
 ```
@@ -169,3 +168,7 @@ sudo i2cdetect -y 1
 ```
 sudo apt-get install python-smbus 
 ```
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
