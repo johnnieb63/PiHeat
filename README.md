@@ -1,4 +1,11 @@
 # PiHeat
+
+Disable bluetooth on RPi3
+
+Add dtoverlay=pi3-disable-bt to /boot/config.txt. You need to be on the latest OSMC version for this to work. Then run 
+```
+sudo systemctl disable brcm43xx.service
+```
 Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
