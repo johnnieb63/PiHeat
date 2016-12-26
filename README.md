@@ -159,4 +159,11 @@ exit
 
 ```
 sudo apt-get install python-pip
+sudo apt-get install i2c-tools
+sudo adduser pi i2c
+sudo reboot
+```
+```
+sudo i2cdetect -y 1
+```
 ```
