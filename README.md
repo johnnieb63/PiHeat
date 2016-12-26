@@ -5,9 +5,11 @@ Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 Description: S-Pi sends stuff to Flask server running on C-Pi by means of temp2.py.
 
-S-Pi runs: breathe.py and temp2.py. Cron runs temp2.py every minute to send state values via JSON to C-Pi
+S-Pi runs: breathe.py (DO NOT USE/RUN THIS PROGRAM) and temp2.py. Cron runs temp2.py every minute to send state values via JSON to C-Pi
 
 C-Pi runs: I2C_LCD_driver.py, PiHeat.py, blynk (at start using rc.local), todo-api/relaydefinitions.py, todo-api/webrelay.py (flask server)
+
+PiHeat.py is a monolothic app. It needs breaking-up and refactoring.
 
 Start S-Pi before C-Pi
 
