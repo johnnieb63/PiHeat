@@ -141,9 +141,8 @@ Remove the modules from the blacklist by commenting them out "add # to the front
 sudo nano /etc/modprobe.d/raspi-blacklist.conf
 Make sure the spi and i2c lines are commented out: 
 
-#blacklist spi-bcm2708
-
-#blacklist i2c-bcm2708
+  "#blacklist spi-bcm2708"
+  "#blacklist i2c-bcm2708"
 
 Lastly, the MPL3115A2 requires a proper repeated start command in it's I2C communication. Raspberry Pi doesn't do this out of the box, but there is a kernel module that can be enabled to make it perform repeated start correctly. Run the following commands to enable repeated start on the Pi:
 sudo su -
