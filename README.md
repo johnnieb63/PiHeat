@@ -167,3 +167,5 @@ sudo reboot
 sudo i2cdetect -y 1
 ```
 ```
+sudo apt-get install python-smbus 
+```
