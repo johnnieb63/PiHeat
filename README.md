@@ -87,6 +87,11 @@ note address and change bus to 1, line 19 of i2c driver program
   curl -i -H "Content-Type: application/json" -X PUT -d '{"state":"off"}' http://localhost:80/WebRelay/api/relays/1
   ```
   
+  To check "hot" variable on Photon
+  ```
+  particle get your_machine_id_here 3 hot
+  ```
+  
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
   C-Pi needs a static IP
