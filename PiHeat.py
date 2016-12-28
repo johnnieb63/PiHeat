@@ -1,3 +1,13 @@
+#--------------------------------------
+#    _____  _____  _____
+#        / /    / /    /  
+#       / /____/ /  __   *nasty hacks*
+# /____/ /      /____/
+#               
+#http://www.johngoode.com
+#
+#--------------------------------------
+
 # Raspberry Pi custom appliance timer
 
 # import GPIO module
