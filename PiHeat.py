@@ -22,10 +22,10 @@ from datetime import timedelta
 
 # set up GPIO pins as outputs
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating on constant
 GPIO.setup(27, GPIO.OUT) # Appliance 5/25 volt relay
 GPIO.setup(24, GPIO.OUT) # LED
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating off
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating on constant
 GPIO.setup(12, GPIO.IN) #low heat condition HEATING IS OFF DUE TO THERMOSTAT
 GPIO.setup(16, GPIO.IN) #medium ECO_MODE
 GPIO.setup(20, GPIO.IN) #high BLAST HEAT
