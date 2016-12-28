@@ -62,7 +62,7 @@ note address and change bus to 1, line 19 of i2c driver program
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  Breathe LED on S-Pi
+  DO NOT USE: Breathe LED on S-Pi
   
   Code for breathe.py came from: https://lifebydesignuk.wordpress.com/2013/02/20/how-to-breathing-led-in-python-for-raspberrypi/
   
@@ -77,7 +77,15 @@ note address and change bus to 1, line 19 of i2c driver program
   
   test that temperatures are being sent: curl -i http://localhost:80/WebRelay/api/relays
   
+  ```
+  curl -i http://192.168.0.112:80/WebRelay/api/relays
+  ```
+  
   set a state: curl -i -H "Content-Type: application/json" -X PUT -d '{"state":"off"}' http://localhost:80/WebRelay/api/relays/1
+  
+  ```
+  curl -i -H "Content-Type: application/json" -X PUT -d '{"state":"off"}' http://localhost:80/WebRelay/api/relays/1
+  ```
   
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
