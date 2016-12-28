@@ -171,7 +171,7 @@ while True:
         mylcd.lcd_clear()
         
         if (datetime.datetime.now().strftime(dateString) < OnTimeAM[currDay].strftime(dateString)):
-          mylcd.lcd_display_string(OnTime2AM[currDay].strftime(dateString2), 1)
+          mylcd.lcd_display_string(OnTimeAM[currDay].strftime(dateString2), 1)
           mylcd.lcd_display_string("next on time (1)", 2)
         if (datetime.datetime.now().strftime(dateString) > OffTimeAM[currDay].strftime(dateString) and datetime.datetime.now().strftime(dateString) < OnTime2AM[currDay].strftime(dateString)):
           mylcd.lcd_display_string(OnTime2AM[currDay].strftime(dateString2), 1)
