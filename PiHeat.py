@@ -8,7 +8,7 @@
 #
 #--------------------------------------
 
-# Raspberry Pi custom appliance timer
+# Raspberry Pi custom appliance timer. Future work; import webrelays and set states without using GPIO pins
 
 # import GPIO module
 import RPi.GPIO as GPIO
