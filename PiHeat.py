@@ -173,6 +173,14 @@ while True:
                    time.sleep(2)
                    mylcd.lcd_clear()
 
+        while (GPIO.input(23) == 1):
+                   GPIO.output(24, True)
+                   GPIO.output(27, True)
+                   mylcd.lcd_display_string("60mins of heat", 1)
+                   mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
+                   time.sleep(2)
+                   mylcd.lcd_clear()
+
         GPIO.output(24, False)
         GPIO.output(27, False)
         mylcd.lcd_display_string("HEATING IS OFF", 1)
