@@ -1,18 +1,14 @@
 # PiHeat
 
-Disable bluetooth on RPi3
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Add dtoverlay=pi3-disable-bt to /boot/config.txt. You need to be on the latest OSMC version for this to work. Then run 
-```
-sudo systemctl disable brcm43xx.service
-```
 Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
 
 Description: S-Pi sends stuff to Flask server running on C-Pi by means of temp2.py.
 
-S-Pi runs: breathe.py (DO NOT USE/RUN THIS PROGRAM) and temp2.py. Cron runs temp2.py every minute to send state values via JSON to C-Pi
+S-Pi runs: temp2.py. Cron runs temp2.py every minute to send state values via JSON to C-Pi. State values correspond to room temperature.
 
 C-Pi runs: I2C_LCD_driver.py, PiHeat.py, blynk (at start using rc.local), todo-api/relaydefinitions.py, todo-api/webrelay.py (flask server)
 
@@ -191,7 +187,12 @@ sudo apt-get install python-smbus
 ```
 sudo pip install ubidots
 ```
-
-
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Disable bluetooth on RPi3 on c-Pi
+
+Add dtoverlay=pi3-disable-bt to /boot/config.txt. You need to be on the latest OSMC version for this to work. Then run 
+```
+sudo systemctl disable brcm43xx.service
+```
