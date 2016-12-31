@@ -1,4 +1,4 @@
-# bury this in a sub folder
+# this file must be in the same folder as c-Pi: temp2.py and s-Pi /todo-api/webrelay.py & req.py
 relays = [
     { 'id' : 1, 'name' : 'hot', 'state' : 'off'},
     { 'id' : 2, 'name' : 'warm', 'state' : 'off'},
