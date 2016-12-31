@@ -90,7 +90,7 @@ note address and change bus to 1, line 19 of i2c driver program
   
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   
-  C-Pi needs a static IP
+  s-Pi and c-Pi need static IP's
   
   sudo nano /etc/dhcpcd.conf
   
@@ -139,6 +139,8 @@ sudo npm install -g blynk-library
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Installing s-Pi
+
+relaydefinitions must be referenceable by any program setting relay states i.e.: sample folder
   
   MPL3115A2 notes
 
