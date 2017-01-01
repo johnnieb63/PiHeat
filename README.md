@@ -42,6 +42,8 @@ GPIO.setup(24, GPIO.OUT) # LED
 
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn on heating
 
+GPIO.setup(23, GPIO.IN) # IFTTT 60mins of constant heat
+
 GPIO.setup(12, GPIO.IN) #low heat condition HEATING IS OFF DUE TO THERMOSTAT 
 
 GPIO.setup(16, GPIO.IN) #medium ECO_MODE
