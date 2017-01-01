@@ -1,0 +1,27 @@
+const int button = 7;  //ask Marvin to count 60 minutes!
+const int ledPin =  8; //tell the world that constant heat has been requested
+const int ledPin2 =  6; //cancel constant heat request
+int buttonState = LOW; 
+
+void setup() 
+  {
+  pinMode(ledPin, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(button, INPUT); 
+  }
+
+void loop() 
+  {
+ 
+  buttonState = digitalRead(button); //constant heat
+ 
+  if (buttonState == HIGH) 
+  { 
+    digitalWrite(ledPin, HIGH); //8
+    delay(360000);              //make this 60mins once the testing phase is complete!!!!!!
+    digitalWrite(ledPin2, HIGH); //tell photon it's time to turn 60mins of constant off
+    delay(3600);
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, LOW);
+  }
+}
