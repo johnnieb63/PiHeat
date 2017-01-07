@@ -2,6 +2,15 @@
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+THE HARDWARE ARCHITECTURE:
+
+1. Controller Pi (c-Pi): runs the timer application PiHeat and Flask
+
+2. Slave Pi (s-Pi): gets room temperature, runs temp2 and sends data to Ubidots
+
+3. Optional: Particle Photo & Arduino Uno
+
+
 Slave Pi and Controller Pi (S-Pi & C-Pi)
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
