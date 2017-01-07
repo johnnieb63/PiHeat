@@ -11,7 +11,7 @@ THE HARDWARE ARCHITECTURE:
 3. Optional: Particle Photo & Arduino Uno
 
 
-Slave Pi and Controller Pi (S-Pi & C-Pi)
+Slave Pi and Controller Pi installation notes
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
 
