@@ -1,17 +1,18 @@
 # PiHeat
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 THE HARDWARE ARCHITECTURE:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Controller Pi (c-Pi): runs the timer application PiHeat and Flask
+1. Controller Pi (c-Pi): runs the timer application PiHeat, Blynk and Flask
 
 2. Slave Pi (s-Pi): gets room temperature, runs temp2 and sends data to Ubidots
 
-3. Optional: Particle Photo & Arduino Uno
+3. Optional: Particle Photo & Arduino Uno. The Photon enables easy integration and secure access with/to IFTTT
 
-
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Slave Pi and Controller Pi installation notes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Install Flask on C-Pi (http://mattrichardson.com/Raspberry-Pi-Flask/)
 
