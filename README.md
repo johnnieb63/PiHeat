@@ -1,6 +1,7 @@
 # PiHeat
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 THE HARDWARE ARCHITECTURE:
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -11,6 +12,7 @@ THE HARDWARE ARCHITECTURE:
 3. Optional: Particle Photo & Arduino Uno. The Photon enables easy integration and secure access with/to IFTTT
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Slave Pi and Controller Pi installation notes
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
