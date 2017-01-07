@@ -22,7 +22,7 @@ S-Pi runs: temp2.py. Cron runs temp2.py every minute to send state values via JS
 
 C-Pi runs: I2C_LCD_driver.py, PiHeat.py, blynk (at start using rc.local), todo-api/relaydefinitions.py, todo-api/webrelay.py (flask server)
 
-PiHeat.py is a monolothic app. It needs breaking-up and refactoring.
+#PiHeat.py is a monolothic app. It needs breaking-up and refactoring.
 
 Start S-Pi before C-Pi
 
@@ -34,9 +34,9 @@ ps ax
 
 should have these entries:
 
-  664 ?        S      0:00 sudo python /home/pi/PiHeat.py
+  664 ?        S      0:00 python /home/pi/PiHeat.py
   
-  665 ?        S      0:00 sudo python /home/pi/todo-api/webrelay.py
+  665 ?        S      0:00 python /home/pi/todo-api/webrelay.py
   
   666 ?        Sl     0:00 node /usr/bin/blynk.js dfafasdfdfsavsvddfsfqWR3987797
 
