@@ -50,7 +50,7 @@ GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn off heating
 
 GPIO.setup(27, GPIO.OUT) # Appliance 5/25 volt relay
 
-GPIO.setup(24, GPIO.OUT) # LED
+GPIO.setup(24, GPIO.OUT) # LED -- spare channel
 
 GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn on heating
 
