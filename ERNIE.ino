@@ -29,7 +29,7 @@
 // system defines
 #define DHTTYPE  DHT11              // Sensor type DHT11/21/22/AM2301/AM2302
 #define DHTPIN   4         	    // Digital pin for communications
-#define DHT_SAMPLE_INTERVAL   60000  // Sample every two seconds
+#define DHT_SAMPLE_INTERVAL   30000  // Sample every two seconds
 
 #define TOKEN "i2atVGlr9GD2Z5TXPDLqeH6Xky9xsq"  // Put here your Ubidots TOKEN
 
@@ -40,14 +40,14 @@ int value2;
 int value3;
 
 
-int sensor1 = A0; //internal
-int sensor2 = A1; //tank
-int sensor3 = A2; //internal
+int sensor1 = A0; //
+int sensor2 = A1; //
+//int sensor3 = A2; //
 
 
-int analogvalue1; //internal
-int analogvalue2; //tank
-int analogvalue3; //internal
+int analogvalue1; //
+int analogvalue2; //
+//int analogvalue3; //
 
 int digivalue1;
 int digivalue2;
@@ -82,11 +82,11 @@ void setup()
     
     pinMode(sensor1,INPUT);
     pinMode(sensor2,INPUT);
-    pinMode(sensor3,INPUT);
+    //pinMode(sensor3,INPUT);
 
-    Particle.variable("analogvalue1", analogvalue1); //internal
-    Particle.variable("analogvalue2", analogvalue2); //tank
-    Particle.variable("analogvalue3", analogvalue3); //internal
+    Particle.variable("analogvalue1", analogvalue1); //
+    Particle.variable("analogvalue2", analogvalue2); //
+    //Particle.variable("analogvalue3", analogvalue3); //
     Particle.variable("digivalue1", digivalue1);
     Particle.variable("digivalue2", digivalue2);
 
@@ -139,13 +139,13 @@ void loop()
         //delay(2000);
         analogvalue2 = analogRead(sensor2);
         //delay(2000);
-        analogvalue3 = analogRead(sensor3);
+        //analogvalue3 = analogRead(sensor3);
         //delay(2000);
-        ubidots.add("attic", analogvalue1); //internal
+        ubidots.add("boiler_flow", analogvalue1); // boiler flow
         //delay(2000);
-        ubidots.add("attic2", analogvalue2); //tank
+        //ubidots.add("kitchen", analogvalue2); //
         //delay(2000);
-        ubidots.add("attic3", analogvalue3); //internal
+        ubidots.add("tank_temp", analogvalue2); // tank temp
         //delay(2000);
         ubidots.sendAll();
         //delay(50000);  
