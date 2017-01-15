@@ -1,6 +1,9 @@
 // This #include statement was automatically added by the Particle IDE.
 #include "Ubidots/Ubidots.h"
 
+// This #include statement was automatically added by the Particle IDE.
+#include "PietteTech_DHT/PietteTech_DHT.h"
+
 /*
  * FILE:        DHT_example.cpp
  * VERSION:     0.4
@@ -22,28 +25,32 @@
  *                          is still for backward compatibility but not used
  */
 
-#include "PietteTech_DHT/PietteTech_DHT.h"  // Uncomment if building in IDE
-//#include "PietteTech_DHT.h"                 // Uncomment if building using CLI
 
 // system defines
 #define DHTTYPE  DHT11              // Sensor type DHT11/21/22/AM2301/AM2302
 #define DHTPIN   4         	    // Digital pin for communications
-#define DHT_SAMPLE_INTERVAL   2000  // Sample every two seconds
+#define DHT_SAMPLE_INTERVAL   60000  // Sample every two seconds
 
-#define TOKEN "i2-yours-goes-here-sq"  // Put here your Ubidots TOKEN
+#define TOKEN "i2atVGlr9GD2Z5TXPDLqeH6Xky9xsq"  // Put here your Ubidots TOKEN
 
 Ubidots ubidots(TOKEN);
 
 int value1;
 int value2;
+int value3;
 
-int sensor1 = A0;
-int sensor2 = A1;
 
-int analogvalue1;
-int analogvalue2;
-int analogvalue3;
-int analogvalue4;
+int sensor1 = A0; //internal
+int sensor2 = A1; //tank
+int sensor3 = A2; //internal
+
+
+int analogvalue1; //internal
+int analogvalue2; //tank
+int analogvalue3; //internal
+
+int digivalue1;
+int digivalue2;
 
 /*
  * NOTE: Use of callback_wrapper has been deprecated but left in this example
@@ -71,15 +78,18 @@ void setup()
     // }
 
 
-    //DHTnextSampleTime = 0;  // Start the first sample immediately
+    DHTnextSampleTime = 0;  // Start the first sample immediately
     
     pinMode(sensor1,INPUT);
     pinMode(sensor2,INPUT);
+    pinMode(sensor3,INPUT);
 
-    Particle.variable("analogvalue1", analogvalue1);
-    Particle.variable("analogvalue2", analogvalue2);
-    Particle.variable("analogvalue3", analogvalue3);
-    Particle.variable("analogvalue4", analogvalue4);
+    Particle.variable("analogvalue1", analogvalue1); //internal
+    Particle.variable("analogvalue2", analogvalue2); //tank
+    Particle.variable("analogvalue3", analogvalue3); //internal
+    Particle.variable("digivalue1", digivalue1);
+    Particle.variable("digivalue2", digivalue2);
+
 }
 
 
@@ -96,16 +106,16 @@ void dht_wrapper() {
 void loop()
 {
   // Check if we need to start the next sample
-  //if (millis() > DHTnextSampleTime) {
-	//if (!bDHTstarted) {		// start the sample
+  if (millis() > DHTnextSampleTime) {
+	if (!bDHTstarted) {		// start the sample
 	    DHT.acquire();
 	    bDHTstarted = true;
-//	}
+	}
 
-//	if (!DHT.acquiring()) {		// has sample completed?
+	if (!DHT.acquiring()) {		// has sample completed?
 
 	    // get DHT status
-	    float result = DHT.getStatus(); //may have to set float back to int
+	    int result = DHT.getStatus(); //may have to set float back to int
 
 	    
 
@@ -115,33 +125,36 @@ void loop()
 	    //Serial.print("Temperature (oC): ");
 	    //Serial.println(DHT.getCelsius(), 2);
 	    //ubidots.add("Temperature (oC): ", DHT.getCelsius());
-	    
 	
-	
-	analogvalue1 = analogRead(sensor1);
-    delay(2000);
-    analogvalue2 = analogRead(sensor2);
-    delay(2000);
-    analogvalue3 = DHT.getCelsius();
-    delay(2000);
-    analogvalue4 = DHT.getHumidity();
+        digivalue1 = DHT.getCelsius();
+        //delay(2000);
+        digivalue2 = DHT.getHumidity();
+        //delay(2000);
+        ubidots.add("Cavity temp", digivalue1);
+        //delay(2000);
+        ubidots.add("Cavity humid", digivalue2);
+        //delay(2000);
+        
+        analogvalue1 = analogRead(sensor1);
+        //delay(2000);
+        analogvalue2 = analogRead(sensor2);
+        //delay(2000);
+        analogvalue3 = analogRead(sensor3);
+        //delay(2000);
+        ubidots.add("attic", analogvalue1); //internal
+        //delay(2000);
+        ubidots.add("attic2", analogvalue2); //tank
+        //delay(2000);
+        ubidots.add("attic3", analogvalue3); //internal
+        //delay(2000);
+        ubidots.sendAll();
+        //delay(50000);  
 
-    ubidots.add("attic", analogvalue1);
-    delay(2000);
-    ubidots.add("attic2", analogvalue2);
-    delay(2000);
-    ubidots.add("attic3", analogvalue3);
-    delay(2000);
-    ubidots.add("humidity", analogvalue4);
-    delay(2000);
-    ubidots.sendAll();
-    delay(50000);  
     
-    //	n++;  // increment counter
-	  //  bDHTstarted = false;  // reset the sample flag so we can take another
-	   // DHTnextSampleTime = millis() + DHT_SAMPLE_INTERVAL;  // set the time for next sample
-	//}
+    	n++;  // increment counter
+	    bDHTstarted = false;  // reset the sample flag so we can take another
+	    DHTnextSampleTime = millis() + DHT_SAMPLE_INTERVAL;  // set the time for next sample
+	}
 
-    //}
+    }
 }
-
