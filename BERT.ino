@@ -1,7 +1,7 @@
 // This #include statement was automatically added by the Particle IDE.
 #include "Ubidots/Ubidots.h"
 
-#define TOKEN "B5msZILvVRpLzEM2DjVYcGORlfEPpd"  // Put here your Ubidots TOKEN
+#define TOKEN "-----yours here-----"  // Put here your Ubidots TOKEN
                                             
 int pushButtonState; 
 int led = D5;                               //constant heat request led
