@@ -1,5 +1,7 @@
 # PiHeat
 
+NB: PiHeat2.py replaces PiHeat.py
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 THE HARDWARE ARCHITECTURE:
