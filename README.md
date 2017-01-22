@@ -11,7 +11,7 @@ THE HARDWARE ARCHITECTURE:
 
 2. Slave Pi (s-Pi): gets room temperature, runs temp2 and sends data to Ubidots
 
-3. Optional: Particle Photo & Arduino Uno. The Photon enables easy integration and secure access with/to IFTTT
+3. Optional: Particle Photon & Arduino Uno. The Photon enables easy integration and secure access with/to IFTTT
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
