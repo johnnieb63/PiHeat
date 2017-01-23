@@ -1,4 +1,12 @@
 # PiHeat
+What does PiHeat do? It doesn't do rocket science. It does little more that control a central heating pump in a system that is non-standard by any measurement. 
+Setting: domestic, 6 bedroom home on 3 floors. 
+Heat source: natural gas boiler.
+Boiler controls and heating controls are decoupled. The boiler heats the water in a 400L themral store. The thermal store supplies domestic hot water and central heating circuits.
+The central heating draws water from the thermal store by means of a pump controlled by PiHeat: valve opens, pump pumps. Simples!
+The boiler has a separate pump and heats water on demand, i.e. thermostat on tank.
+
+
 
 NB: PiHeat2.py replaces PiHeat.py
 
