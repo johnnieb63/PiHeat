@@ -4,7 +4,7 @@ Setting: domestic, 6 bedroom home on 3 floors.
 Heat source: natural gas boiler.
 Boiler controls and heating controls are decoupled. The boiler heats the water in a 400L themral store. The thermal store supplies domestic hot water and central heating circuits.
 The central heating draws water from the thermal store by means of a pump controlled by PiHeat: valve opens, pump pumps. Simples!
-The boiler has a separate pump and heats water on demand, i.e. thermostat on tank. PiHeat enables control via IFTTT and Blynk.
+The boiler has a separate pump and heats water on demand, i.e. thermostat on tank. PiHeat enables control via IFTTT and Blynk. PiHeat also contains heating controls for 7 days, and a potentially unlimited number of daily profiles.
 
 NB: PiHeat2.py replaces PiHeat.py
 
