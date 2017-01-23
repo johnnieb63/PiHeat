@@ -32,8 +32,6 @@ S-Pi runs: temp2.py. Cron runs temp2.py every minute to send state values via JS
 
 C-Pi runs: I2C_LCD_driver.py, PiHeat.py, blynk (at start using rc.local), todo-api/relaydefinitions.py, todo-api/webrelay.py (flask server)
 
-#PiHeat.py is a monolothic app. It needs breaking-up and refactoring.
-
 Start S-Pi before C-Pi
 
 SSH to C-Pi
