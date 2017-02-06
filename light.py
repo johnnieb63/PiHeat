@@ -1,3 +1,5 @@
+#currently this app is nothing more than a useless appendage
+
 import tsl2591
 from ubidots import ApiClient
 import time
