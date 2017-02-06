@@ -32,7 +32,7 @@ try:
             r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/5', verify=False, json={"state": cTemp})
             headers = {'Content-type': 'application/json'}
 
-            if cTemp < 20:
+            if cTemp < 17.8:
                 r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "on"})
                 headers = {'Content-type': 'application/json'}
 
@@ -42,7 +42,7 @@ try:
                 r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "off"})
                 headers = {'Content-type': 'application/json'}
 
-            if cTemp > 22:
+            if cTemp > 19:
                 r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/1', verify=False, json={"state": "on"})
                 headers = {'Content-type': 'application/json'}
 
@@ -52,7 +52,7 @@ try:
                 r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/3', verify=False, json={"state": "off"})
                 headers = {'Content-type': 'application/json'}
 
-            if ((cTemp >= 20) and (cTemp <= 22)):
+            if ((cTemp >= 17.8) and (cTemp <= 19)):
                 r = requests.put('http://192.168.0.112:80/WebRelay/api/relays/2', verify=False, json={"state": "on"})
                 headers = {'Content-type': 'application/json'}
 
