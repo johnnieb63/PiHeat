@@ -1,3 +1,6 @@
+#s-Pi decommissioned. replaced with Ernie running: mpl3115a2.ino
+# do not use this program
+
 # Distributed with a free-will license.
 # Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
 # MPL3115A2
