@@ -15,9 +15,9 @@ THE HARDWARE ARCHITECTURE:
 
 1. Controller Pi (c-Pi): runs the timer application PiHeat, Blynk and Flask
 
-2. Slave Pi (s-Pi): gets room temperature, runs temp2 and sends data to Ubidots
+2. UPDATE: s-Pi has been replaced with Photon Ernie running mpl3115a2.ino. Slave Pi (s-Pi): gets room temperature, runs temp2 and sends data to Ubidots
 
-3. Optional: Particle Photon & Arduino Uno. The Photon enables easy integration and secure access with/to IFTTT
+3. Optional: Particle Photon. The Photon enables easy integration and secure access with/to IFTTT
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
