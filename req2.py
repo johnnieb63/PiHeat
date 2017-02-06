@@ -8,7 +8,7 @@ from relaydefinitions import relays, relayIdToPin
 
 
 try:
-            url = "https://api.particle.io/v1/devices/2532478653876533/hot?access_token=399453764532765432875236487624"
+            url = "https://api.particle.io/v1/devices/2532476243876233/hot?access_token=3994537876328764238766487624"
 
             json_string = urllib.urlopen(url).read()
             parsed_json = json.loads(json_string)
