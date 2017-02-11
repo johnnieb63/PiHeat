@@ -12,16 +12,16 @@ from datetime import timedelta
 
 # set up GPIO pins as outputs
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating on
+#GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating on
 GPIO.setup(27, GPIO.OUT) # Appliance 5/25 volt relay
-GPIO.setup(24, GPIO.OUT) # LED
-GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating off
+#GPIO.setup(24, GPIO.OUT) # LED
+#GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #Blynk turn heating off
 GPIO.setup(12, GPIO.IN) #low heat condition HEATING IS OFF DUE TO THERMOSTAT
 GPIO.setup(16, GPIO.IN) #medium ECO_MODE
 GPIO.setup(20, GPIO.IN) #high BLAST HEAT
 GPIO.setup(23, GPIO.IN) #60mins constant heat via swith (to be fitted) or via IFTTT
 # set heating relay and indicator light off
-GPIO.output(24, False)
+#GPIO.output(24, False)
 GPIO.output(27, False)
 
 MonAMOn = datetime.datetime(1920,1,1,6,0,0)
@@ -159,23 +159,23 @@ mylcd.lcd_clear()
 while True:
 
 
-        while (GPIO.input(17) == 1):
-                   GPIO.output(24, True)
-                   GPIO.output(27, True)
-                   mylcd.lcd_display_string("HEAT VIA MOBILE", 1)
-                   mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
-                   time.sleep(2)
-                   mylcd.lcd_clear()
+        #while (GPIO.input(17) == 1):
+                   #GPIO.output(24, True)
+                   #GPIO.output(27, True)
+                   #mylcd.lcd_display_string("HEAT VIA MOBILE", 1)
+                   #mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
+                   #time.sleep(2)
+                   #mylcd.lcd_clear()
 
         while (GPIO.input(23) == 1):
-                   GPIO.output(24, True)
+                   #GPIO.output(24, True)
                    GPIO.output(27, True)
                    mylcd.lcd_display_string("1 hour of heat", 1)
                    mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
                    time.sleep(2)
                    mylcd.lcd_clear()
 
-        GPIO.output(24, False)
+        #GPIO.output(24, False)
         GPIO.output(27, False)
         mylcd.lcd_display_string("HEATING IS OFF", 1)
         mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
@@ -238,7 +238,7 @@ while True:
                    if GPIO.input(20) == GPIO.HIGH:
                         mylcd.lcd_display_string("WARP DRIVE!", 1)
                         mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
-                        GPIO.output(24, True)
+                        #GPIO.output(24, True)
                         GPIO.output(27, True)
                         time.sleep(3)
                         mylcd.lcd_clear()
@@ -248,7 +248,7 @@ while True:
                         mylcd.lcd_clear()
 
                    if GPIO.input(12) == GPIO.HIGH:
-                        GPIO.output(24, False)
+                        #GPIO.output(24, False)
                         GPIO.output(27, False)
                         mylcd.lcd_display_string("OFF: THERMOSTAT", 1)
                         mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
@@ -269,7 +269,7 @@ while True:
                    if GPIO.input(16) == GPIO.HIGH:
                         mylcd.lcd_display_string("ECO MODE", 1)
                         mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
-                        GPIO.output(24, True)
+                        #GPIO.output(24, True)
                         GPIO.output(27, True)
                         time.sleep(240)
                         mylcd.lcd_display_string(whenNextOff[currDay].strftime(dateString2), 2)
@@ -280,16 +280,16 @@ while True:
                         mylcd.lcd_clear()
 #switch off 
                    if (whenNextOff[currDay].strftime(dateString) <= datetime.datetime.now().strftime(dateString)):
-                        GPIO.output(24, False)
+                        #GPIO.output(24, False)
                         GPIO.output(27, False)
                         mylcd.lcd_display_string("FINITO!", 1)
                         time.sleep(10)
                         mylcd.lcd_clear()
-                   else :
-                        while GPIO.input(25) == 1:
-                          mylcd.lcd_display_string("BANK MGR :)!", 1)
-                          mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
-                          GPIO.output(24, False)
-                          GPIO.output(27, False)
-                          time.sleep(10)
-                          mylcd.lcd_clear()
+                   #else :
+                    #    while GPIO.input(25) == 1:
+                     #     mylcd.lcd_display_string("BANK MGR :)!", 1)
+                      #    mylcd.lcd_display_string(datetime.datetime.now().strftime(dateString2), 2)
+                          #GPIO.output(24, False)
+                       #   GPIO.output(27, False)
+                        #  time.sleep(10)
+                         # mylcd.lcd_clear()
